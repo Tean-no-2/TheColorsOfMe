@@ -16,7 +16,18 @@
   <!-- font -->
   <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
   <script src="jquery.min.js"></script>
+
 <script>
+ $(function (){
+        $(document).ready(function(){
+          $('#listbtn').click(function(){
+            $('#plusbtn').slideToggle('slow');          
+          });
+        });
+      });
+  
+
+
   $(function (){
     $.fn.extend({
       faq: function() {
@@ -39,11 +50,8 @@
 
   });
 
-
-
-
-
 </script>
+
 </head>
 
 <body>
@@ -85,16 +93,17 @@
           </ul>
           </div>  
       </div>
-    </section>s
+    </section>
 
   </div>
   <section class="question">
     <div class="title3">
       <h2>구입관련 질문</h2><button id="listbtn" class="listbtn">+</button></div>
-      
+      <div class="plusbtn" id="plusbtn">
+
       <div class = "faq">
         <ul>
-          <li class="plusbtn">
+          <li class="">
             <p><button class="qnabtn"><h3>제품을 언제 받아볼 수 있나요?</h3></button></p>
             <div>
               <div class="cont">우편 번호를 입력하면 예상 배송 또는 제품 픽업 날짜를 볼 수 있습니다.
@@ -106,7 +115,7 @@
           
         </ul>
       </div>
-        
+
       <div class="faq">
         <ul>
           <li>
@@ -140,12 +149,14 @@
             <p><button class="qnabtn"><h3>Apple은 교육 할인을 제공하나요?</h3></button></p>
             <div>
               <div class="cont">네, 그렇습니다. Apple은 학생, 선생님, 학교 관리자 및 직원에 대해 특별 가격을 제공합니다. 이에 해당한다고 생각하시면 
-                <button class="pickbtn">Apple 교육 할인 스토어</button>를 방문하여 제품을 주문하시기 바랍니다.</div>
+                <button class="pickbtn">Apple 교육 할인 스토어</button>를 방문하여 제품을 주문하시기 바랍니다.<br><br></div>
             </div>
           </li>
         </ul>
         </div>
-     
+
+      </div>
+
   </section>
   <div id="footers"></div>
 </body>
