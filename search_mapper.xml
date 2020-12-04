@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+					    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+					    
+<mapper namespace="search">
+	<select id="getSearchList" parameterType="com.tjoeun.spring.beans.ProductDTO">
+		<![CDATA[
+			select product_id, product_name, product_en_name,product_color,product_price,product_origin, product_img,product_info from product_table 
+			where product_name=#{product_search} or product_color=#{product_search}
+		]]>
+	</select>
+
+ 
+</mapper>
