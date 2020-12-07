@@ -28,6 +28,28 @@ create table product_table(
     product_img varchar2(50),
     product_info varchar2(50)
     );
+drop table productImg_table purge;
+create table productImg_table(
+    product_id number,
+    main_img varchar2(300)
+);
+insert into productImg_table values(7,'fruit07-5.png');
+insert into productImg_table values(7,'fruit07-1.png');
+insert into productImg_table values(7,'fruit07-2.png');
+insert into productImg_table values(7,'fruit07-3.png');
+
+insert into productImg_table values(8,'paprika1.jpg');
+insert into productImg_table values(8,'paprika2.jpg');
+insert into productImg_table values(8,'paprika3.jpg');
+insert into productImg_table values(8,'paprika4.jpg');
+
+select * from productImg_table; 
+
+commit;
+select main_img
+from productImg_table 
+where product_id = 7;
+
 create sequence p_seq
 start with 1
 increment by 1
@@ -39,7 +61,7 @@ insert into product_table values(	3,	'수박',	'watermelon',	'RED',	19900,	'국내산
 insert into product_table values(	4,	'사과',	'apple',	'RED',	18900,	'국내산',	'fruit04.jpg',	'fruit_detail04.png'	);
 insert into product_table values(	5,	'석류',	'pomegranate',	'RED',	25900,	'수입산',	'fruit05.jpg',	'fruit_detail05.png'	);
 insert into product_table values(	6,	'고추',	'red pepper',	'RED',	1980,	'국내산',	'fruit06.jpg',	'fruit_detail06.png'	);
-insert into product_table values(	7,	'호박',	'pumpkin',	'YELLOW',	6980,	'국내산',	'fruit07.jpg',	'fruit_detail07.png'	);
+insert into product_table values(	7,	'호박',	'pumpkin',	'YELLOW',	6980,	'국내산',	'fruit07-5.png',	'fruit_detail07.png'	);
 insert into product_table values(	8,	'파프리카',	'pepper',	'YELLOW',	3480,	'수입산',	'fruit08.jpg',	'fruit_detail08.png'	);
 insert into product_table values(	9,	'오렌지',	'orange',	'YELLOW',	15900,	'수입산',	'fruit09.jpg',	'fruit_detail09.png'	);
 insert into product_table values(	10,	'바나나',	'banana',	'YELLOW',	4980,	'수입산',	'fruit10.jpg',	'fruit_detail10.png'	);
