@@ -1,0 +1,144 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans', 'Noto Sans KR',sans-serif;
+}
+/* Header */
+#headers{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.payinfo .container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    max-width: 1500px;
+    margin: 70px auto;
+    padding: 50px;
+}
+
+.payinfo .container .list ul{
+    line-height: 2rem;
+}
+.payinfo .container .list .name{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.payinfo .container .list ul li:first-child{
+    margin-top: 50px;
+}
+.payinfo .container .list ul li:first-child,
+.payinfo .container .list ul li:nth-child(4),
+.payinfo .container .list ul li:nth-child(6){
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.payinfo .container .list ul li:nth-child(3),
+.payinfo .container .list ul li:nth-child(5){
+    margin-bottom: 50px;
+}
+.payinfo .container .paylist{
+    max-width:1200px;
+    position: relative;
+}
+.payinfo .container .paylist .paytitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 5px solid black;
+}
+
+.payinfo .container .paylist .paynav ul,
+.payinfo .container .paylist .paylist-inlist{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 40px;
+    border-bottom: 1px solid black;
+}
+.payinfo .container .paylist .paynav ul{
+font-weight: 600;
+}
+.payinfo .container .paylist p:nth-child(2){
+    background-color: #fff;
+    padding: 0px 70px 0px 20px;
+    z-index: 1;
+    font-weight: 600;
+}
+.payinfo .container .paylist p:last-child{
+    margin-left: 10px;
+}
+.payinfo .container .paylist .inlist-first p:last-child{
+    margin-left: 200px;
+    position: absolute;
+}
+.payinfo .container .paylist .paynav ul li:first-child{
+    margin-right: 80px;
+}
+.payinfo .container .paylist .paynav ul li:nth-child(2){
+    margin-right: auto;
+}
+.payinfo .container .paylist .paynav ul li:last-child{
+    margin-left: 100px;
+}
+
+.payinfo .container .paylist .paylist-out{
+    display: flex;
+    flex-direction: column;
+    
+}
+.payinfo .container .paylist .paylist-inlist .inlist-first{
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+.payinfo .container .paylist .paylist-inlist .inlist-first p{
+    margin-right: 50px;
+}
+.payinfo .container .paylist .paylist-inlist .inlist-first img{
+    width: 60px;
+    height: 60px;
+    background-color: blue;
+}
+@media screen and (max-width: 1200px) { 
+  .payinfo .container {
+    grid-template-columns: 1fr;
+    padding: 20px;
+}
+ .payinfo .container .list ul{
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     justify-content: center;
+     width: 100%;
+     border-top:3px solid black ;
+ } 
+ .payinfo .container .list ul li{
+    border-bottom:1px solid black ;
+    width: 100%;
+ }
+}
+@media screen and (max-width:720px){
+    .payinfo .container .paylist{
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width:631px){
+    .payinfo .container .list{
+        margin-bottom: 50px;
+    }
+    .payinfo .container .paylist{
+        display: none;
+    }
+}
+
