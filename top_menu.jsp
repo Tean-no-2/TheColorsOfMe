@@ -30,7 +30,7 @@
     }
  </style>  -->
 </head>
- <link rel="stylesheet" href="../css/topNav.css">
+ <link rel="stylesheet" href="${root }css/topNav.css">
 <body>
  <header>
 <!-- 상단 메뉴 부분 -->
@@ -57,26 +57,40 @@
 			</li>
 			<li id="hideSearch">
 			<img src="${root }image/search.svg">
-			<!-- 검색기능 -->
-			<input type="text" placeholder="&#xF002;  apple.com 검색" style="font-family:Arial, FontAwesome" >
+			<form action="${root }search/searchList">
+			<input type="search" name="product_color" placeholder="&#xF002;  과일이름 검색" style="font-family:Arial, FontAwesome" >
+            </form>
             </li>
-            
-            <c:forEach var="dto" items="${topMenuList }">
-              <li class="nav-item">
-                <a href="${root }board/main?board_info_idx=${dto.board_info_idx}" class="meun-item nav-link">${dto.board_info_name }</a>
-              </li>
-            </c:forEach> 
-            
+             <li class="nav-item">
+              <a href="${root }menu/red_do" " id="mac"class="meun-item nav-link">RED</a>
+            </li>
             <li class="nav-item">
-            	<!-- 검색기능 -->
+              <a href="${root }menu/yellow_do" class="meun-item nav-link">YELLOW</a>
+            </li>
+            <li class="nav-item">
+              <a href="${root }menu/green_do" class="meun-item nav-link">GREEN</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="meun-item nav-link">WHITE</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="meun-item nav-link">BLACK</a>
+            </li>
+         <!--    <li class="nav-item">
+              <a href="#" class="meun-item nav-link">Music</a>
+            </li> -->
+            <%-- <c:forEach var="dto" items="${topMenuList }">
+              <li class="nav-item">
+                <a href="${root }menu/product_list?top_info_idx=${dto.top_info_idx}" class="meun-item nav-link">${dto.top_info_name }</a>
+              </li>
+            </c:forEach> --%>
+            <li class="nav-item">
             	<a class="nav-link nav-link-search" id="search" href="#"><img src="${root }image/search.svg"></a>
             </li>
             <li class="nav-item nav-item-hidden">
             	<a class="nav-link nav-link-bag nav-link-bag1" href="#"><img src="${root }image/bag.svg"></a>
             </li>
-            
-            
-            <c:choose>
+             <c:choose>
             <c:when test="${empty sessionScope.user_id }">
             	<li>
             	<a href="${root }user/login" class="topBarBtn">로그인</a>
@@ -91,36 +105,61 @@
            	</c:otherwise>
            	</c:choose>
            	
-            
             <div class="search-form">
-              <form action="${root }search/searchList" method="get">
-              	<!-- 검색기능 -->
-                <input type="search" name="product_name" placeholder="과일과 색깔을 입력해주세요" />
-              </form><!-- 
-              <a class="close"><i class="fa fa-times"></i></a> -->
+              <form  action="${root }search/searchList.do">
+                <input type="search" name="sh" placeholder="과일이름 검색" />
+              </form>
+              <a class="close"><i class="fa fa-times"></i></a>
             </div>
+            
            </ul>
            <ul id="hide2" class="hide2">
                 <li id="hide2Blank"></li>
-                <li id="hide2Bag"><i class="fas fa-shopping-bag"><img src="${root }image/bag.svg"></i><a href ="${root }cart/list.do">장바구니</a></li>
-                <li><i class="far fa-heart"></i>즐겨찾기</li>
-                <li><i class="fas fa-box"></i>주문</li>
-                <li><i class="fas fa-cog"></i>계정</li>
-                <li><i class="far fa-user-circle"></i>로그인</li>
+                <li><i class="far fa-heart"></i><a href="${root }userInfo/userorder.do">MyPage</a></li>
+                <li id="hide2Bag"><i class="fas fa-shopping-bag"><img src="${root }image/bag.svg"></i><a href="${root }cart/list.do">장바구니</a></li>
+                 <li><i class="fas fa-cog"></i><a href="${root }board/main.do">고객지원</a></li>
+                <li><i class="fas fa-cog"></i><a href="${root }user/join">회원가입</a></li>
+                  <li><i class="fas fa-cog"></i><a href="${root }game/main1">game</a></li>
+                <c:choose>
+                <c:when test="${empty sessionScope.user_id }">
+                <li><i class="far fa-user-circle"></i><a href="${root }user/login">로그인</a></li>
+              	</c:when>
+              	<c:otherwise>
+              	<li>
+           			<p class="idfont">${sessionScope.user_id }님</p>
+           			<a href="${root }user/logout.do" class="topBarBtn">로그아웃</a>
+           		</li>
+              	</c:otherwise>
+              	</c:choose>
               </ul>
+         
+              
+           
+		
 	</nav>
-		<div class="nav-link-bag__list">
+          
+	<div class="nav-link-bag__list">
           <div class="bagListContents">
             <ul id="hide" class="hide">
               <li id="hideBlank"></li>
+              <li><i class="far fa-heart"></i><a href="${root }userInfo/userorder.do">MyPage</a></li>
               <li id="hideBag"><i class="fas fa-shopping-bag"></i><a href="${root }cart/list.do">장바구니</a></li>
-              <li><i class="far fa-heart"></i>즐겨찾기</li>
-              <li><i class="fas fa-box"></i>주문</li>
-              <li><i class="fas fa-cog"></i>계정</li>
-              <li><i class="far fa-user-circle"></i>로그인</li>
-            </ul>
+               <li><i class="fas fa-cog"></i><a href="${root }board/main.do">고객지원</a></li>
+              <li><i class="fas fa-cog"></i><a href="${root }user/join">회원가입</a></li>
+               <li><i class="fas fa-cog"></i><a href="${root }game/main1">game</a></li>
+               <c:choose>
+                <c:when test="${empty sessionScope.user_id }">
+                <li><i class="far fa-user-circle"></i><a href="${root }user/login">로그인</a></li>
+              	</c:when>
+              	<c:otherwise>
+              	<li>
+           			<i class="far fa-user-circle"></i><a href="${root }user/logout.do" class="topBarBtn">로그아웃</a>
+           		</li>
+              	</c:otherwise>
+              	</c:choose>
+              	</ul>
          </div>
-       </div>  
+   </div>
   </div>
 </header>
 
@@ -129,8 +168,8 @@
  <script
       src="https://code.jquery.com/jquery-3.5.1.js"
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-      crossorigin="anonymous">
- </script>
+      crossorigin="anonymous"
+    ></script>
     <script type="text/javascript">
       $(document).ready(function () {
         $("#search").click(function () {
