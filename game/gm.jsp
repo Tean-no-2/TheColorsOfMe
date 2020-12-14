@@ -2,15 +2,18 @@
     pageEncoding="UTF-8"%>
  <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
  <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
- <c:set var="root" value="${pageContext.request.contextPath }/" />
+  <c:set var="root" value="${pageContext.request.contextPath }/" />
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="${root }css/gamequestion.css">
+ 
   <title>Insert title here</title>
    <script>
+
    let q_num=1;
    let layer;
    let score=Number();
@@ -36,14 +39,13 @@
                color="yellow"
              imgg='${root}image/image-1.jpg'
            }else if(score <= 40){
-               color="puple"
+               color="purple"
                imgg='${root}image/image-3.jpg'
            }else{
                color="white"
               imgg='${root}image/image-4.jpg'
            }
-
-         document.all.quizScore.innerHTML="당신은" +color+"입니다.";
+         document.all.quizScore.innerHTML="당신은 "+color+" 입니다.";
           document.all.quizScore.style.display="inline";
            
            let test = document.getElementById("test");
@@ -77,48 +79,53 @@ window.onload=show_question;
     </script>
 </head>
 <body>
-     
-      <div id="question1" style="display:none">
-        <b>1. 블루비 운영진과 닮은 연예인은 ?</b><br>
+  <div id="question1" >
+        <h1>1.(항산화)거울에 내모습을 봤을때 세월의 흔적이 보입니까?</h1><br>
+            <!--  <a class="as" href= "javascript:void(0)" onclick="check_answer()" value=2>예</a><br>
+        <a class="as" href="javascript:void(0)" onclick="check_answer()" value=1>아니요</a><br> -->
+        <div id="button1">
         <button id="as1" onclick="check_answer1()" value=2>예</button>
         <button id="ad1" onclick="check_answer2()" value=0>아니요</button>
-       <!--  <a class="as" href= "javascript:void(0)" onclick="check_answer()" value=2>예</a><br>
-        <a class="as" href="javascript:void(0)" onclick="check_answer()" value=1>아니요</a><br> -->
-        
+        </div>
+
     </div>
-    
+
     <div id="question2" style="display:none">
-    <b>2. 다음중 광역시가 아닌곳은?</b><br>
+    <h1>2.(시력회복) 휴대폰을 2시간 이상 보시나요?</h1><br>
+    <div id="button1">
     <button id="as2" onclick="check_answer1()" value=4>예</button>
     <button id="ad2" onclick="check_answer2()" value=0>아니요</button>
-    
     </div>
-    
+</div>
+
     <div id="question3" style="display:none">
-    <b>3. 블루비 도메인이 아닌것은?</b><br>
+    <h1>3.(간기능) 숙면을 취한 다음날 피곤함을 느끼시나요?</h1><br>
+    <div id="button1">
     <button  id="as3" onclick="check_answer1()" value=8>예</button>
     <button  id="ad3" onclick="check_answer2()" value=0>아니요</button>
-    
+</div>
     </div>
-    
+
     <div id="question4" style="display:none">
-    <b>4. 블루비에서 제공하는 포인트 이름은 ?</b><br>
+    <h1>4.(숙취) 회식후 다음날 내몸 같지 않으신가요?</h1><br>
+    <div id="button1">
     <button id="as4" onclick="check_answer1()" value=16>예</button>
     <button id="ad4" onclick="check_answer2()" value=0>아니요</button>
     </div>
-    
+</div>
     <div id="question5" style="display:none">
-    <b>5. 블루비를 설명한 것 중 맞는것은?</b><br>
+    <h1>5.(혈관) 고기 없이 식사를 못하시나요?</h1><br>
+    <div id="button1">
     <button id="as5" onclick="check_answer1()" value=32>예</button>
     <button id="ad5" onclick="check_answer2()" value=0>아니요</button>
     </div>
-    
-    <div align="center">
-    <div id="quizScore" style="display:none"> </div>
-    <br>
-    <img src="" id="test" style="display:none; width:200px;"> </img>
-    <br>
-    <a href="" id="detail"  style="display:none">보러가기</a>
-    </div>
+</div>
+    <div id="center">
+        <div id="quizScore" style="display:none"> </div>
+        <br>
+        <img src="" id="test" style="display:none; width:300px;"> </img>
+        <br>
+        <a href="" id="detail"  style="display:none">보러가기</a>
+        </div>
 </body>
 </html>
