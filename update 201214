@@ -1,0 +1,32 @@
+
+UPDATE product_table SET	product_info=	'토마토는?그?무엇도?될?수?있어요. tom made tomato'	where product_id=	1	;
+UPDATE product_table SET	product_info=	'딸기는?달고?향기로워. strawberry very merries you'	where product_id=	2	;
+UPDATE product_table SET	product_info=	'진하게 달콤한 체리의 과육. cherry carries nutrient'	where product_id=	3	;
+UPDATE product_table SET	product_info=	'한입 베어무는 건강한 미래, 이미 내 손 안에. apple is lucxury'	where product_id=	4	;
+UPDATE product_table SET	product_info=	'보석 같은 과육. Pomegranate is watching poem'	where product_id=	5	;
+UPDATE product_table SET	product_info=	'매운맛에는.달콤함과 감칠맛이 들어있다. red pepper is the taste mapper'	where product_id=	6	;
+UPDATE product_table SET	product_info=	'호박의 흐름을 바꾸다. Pumpkin old'	where product_id=	7	;
+UPDATE product_table SET	product_info=	'프로 중의 프로. Paprika'	where product_id=	8	;
+UPDATE product_table SET	product_info=	'건강의 미래, 이미 내 손 안에. Orange'	where product_id=	9	;
+UPDATE product_table SET	product_info=	'손색없다.?부담없다. Banana'	where product_id=	10	;
+UPDATE product_table SET	product_info=	'새로운 파워. 어마무시한 가능성. Pineapple'	where product_id=	11	;
+UPDATE product_table SET	product_info=	'강력하다.다채롭다.경이롭다. Lemon'	where product_id=	12	;
+UPDATE product_table SET	product_info=	'섭취한?단백질을?피와?살로. kiwi will be king'	where product_id=	13	;
+UPDATE product_table SET	product_info=	'이?한알로?잉태되는?하나의?생명. green bean Are you agree?'	where product_id=	14	;
+UPDATE product_table SET	product_info=	'보이는?색과?맛과?향이?같아. green color green taste'	where product_id=	15	;
+UPDATE product_table SET	product_info=	'오이, 가장 촉촉한 채소. cucumber sounds cute'	where product_id=	16	;
+UPDATE product_table SET	product_info=	'고급스럽게,?요리하기?좋은. Spinach'	where product_id=	17	;
+UPDATE product_table SET	product_info=	'초장과?함께라면?가장?맛있는?색깔. Broccoli'	where product_id=	18	;
+UPDATE product_table SET	product_info=	'고기?다음으로?중요한?맛. onion is only one'	where product_id=	19	;
+UPDATE product_table SET	product_info=	'무와?함께하지?않은적이?없어요. radish on my dish'	where product_id=	20	;
+UPDATE product_table SET	product_info=	'새로운?파워.?어마무시한?가능성. garlic on flavor.'	where product_id=	21	;
+UPDATE product_table SET	product_info=	'맛?있고?몸에?좋기?힘든데?해냈다. pear is pair game'	where product_id=	22	;
+UPDATE product_table SET	product_info=	'생강은?원래?이렇게?생겼어요. ginger moves like zinza'	where product_id=	23	;
+UPDATE product_table SET	product_info=	'향이나고.?풍미가?짙고.?경이롭다. mushroom wish your dish'	where product_id=	24	;
+UPDATE product_table SET	product_info=	'항산화?세월을?바꾸다. The greatest grape'	where product_id=	25	;
+UPDATE product_table SET	product_info=	'우울한?기분?먹어서?혼내주자. Blueberry'	where product_id=	26	;
+UPDATE product_table SET	product_info=	'아픈?위장에?건강한?양배추. Cabbage'	where product_id=	27	;
+UPDATE product_table SET	product_info=	'새로운 식감, 어른스런 풍미. EggPlant'	where product_id=	28	;
+UPDATE product_table SET	product_info=	'이보다?고급스러운?달콤함이?있을까요. Mulberry'	where product_id=	29	;
+UPDATE product_table SET	product_info=	'요즘 제가 자주 마셔요. Coffee'	where product_id=	30	;
+
